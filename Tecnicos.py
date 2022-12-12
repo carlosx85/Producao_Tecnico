@@ -8,11 +8,18 @@ from PIL import Image
 import tkinter
 import matplotlib
 import seaborn as sns
+import tabloo
+from streamlit_lottie import st_lottie
+import requests
 
 
 
 
-# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 st.set_page_config(
     page_title="Telefonia Pública - App",
@@ -81,18 +88,6 @@ st.markdown('''Análise Geral de produção dos Técnicos com relação a Telefo
 
 
 
-
-
-
-# TOP KPI's
-
-producao = df[df['Tipo'] == "Produtivo"].shape[0]
-improdutivo = df[df['Tipo'] == "Improdutivo"].shape[0]
-limpeza = df[df['Tipo'] == "Limpeza"].shape[0]
-producao_total = improdutivo + producao
-
-
-
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
@@ -103,111 +98,43 @@ stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/maste
 
 
 # Row A
-
-
 col1, col2 = st.columns(2)
 
 with col1:  
    st.image("streamlit-logo-secondary-colormark-darktext.png")
 
 with col2:
-   st.header("Produção Total")
-   st.metric("",f"{producao_total:}", "")  
-
-
-
-
-# Row B
-col1, col2, col3, col4 = st.columns(4)
-
-with col1:
-    st.subheader("Produção Total")
-    st.subheader(f"{producao_total:}")
-
-with col2:
-    st.subheader("Produção")
-    st.subheader(f"{producao:}")
-
-with col3:
-    st.subheader("Improdutivo")
-    st.subheader(f"{improdutivo:}")
-
-with col4:
-    st.subheader("Limpeza")
-    st.subheader(f"{limpeza:}")
-
-st.markdown("""---""")
-
-
-
-
-# SALES BY PRODUCT LINE [BAR CHART]
-sales_by_product_line = (
-    df.groupby(by=["Tipo"]).count()[["RE"]] 
-)
-fig_product_sales = px.bar(
-    sales_by_product_line,
-    x="RE",
-    y=sales_by_product_line.index,
-    orientation="h",
-    title="",
-    color_discrete_sequence=["#0083B8"] * len(sales_by_product_line),
-    template="plotly_white",
-)
-fig_product_sales.update_layout(
-    plot_bgcolor="rgba(0,0,0,0)",
-    xaxis=(dict(showgrid=False))
-)
-
-
-# GRAFICO DE PIZZA
-labels = 'Produtivo', 'Improdutivo'
-sizes = [producao, improdutivo]
-explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
-
-fig1, ax1 = plt.subplots()
-ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', shadow=True, startangle=50)
-ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-
-
-# COLUNA PIZZA  + PARETO
-left_column, right_column = st.columns(2)
-left_column.pyplot(fig1)
-right_column.plotly_chart(fig_product_sales, use_container_width=True)
-
-
-
-# df.groupby(by=[ "Tipo", "Dia" ]).count()[["Seq"]] 
-# chart_datax = pd.DataFrame(df["Dia"].unique(),3, columns=df["Tipo"].unique())
-# st.area_chart(chart_datax)
- 
-
-pd.DataFrame()
-
-chart_data = pd.DataFrame(np.random.randn(10, 3),    columns=df["Tipo"].unique())
-st.line_chart(chart_data)
-
-
-
-# LISTAGEM DIA
-st.title(":bar_chart: Listagem")
- 
-
-
-dx = pd.crosstab(df.Supervisor, df.Tipo , margins=True,  margins_name="Total")
-
-
-df
-
-st.title(":bar_chart: Producão Dia")
-
+   st.header("Produção por Técnico")
+  
+  
+dx = pd.crosstab(df.Tecnico,  df.Dia , margins=True,  margins_name="Total")
 dx
 
 
+# ---- LOAD ASSETS ----
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+ 
 
-
-
-
+# ---- WHAT I DO ----
+with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.header("What I do")
+        st.write("##")
+        st.write(
+            """
+            On my YouTube channel I am creating tutorials for people who:
+            - are looking for a way to leverage the power of Python in their day-to-day work.
+            - are struggling with repetitive tasks in Excel and are looking for a way to use Python and VBA.
+            - want to learn Data Analysis & Data Science to perform meaningful and impactful analyses.
+            - are working with Excel and found themselves thinking - "there has to be a better way."
+            If this sounds interesting to you, consider subscribing and turning on the notifications, so you don’t miss any content.
+            """
+        )
+        st.write("<[YouTube Channel >](https://youtube.com/c/CodingIsFun)")
+    with right_column:
+        st_lottie(lottie_coding, height=300, key="coding")
 
 
 
