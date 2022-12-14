@@ -9,11 +9,6 @@ import matplotlib
 import seaborn as sns
 from streamlit_lottie import st_lottie
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
@@ -214,6 +209,11 @@ st.title(":bar_chart: Producão Dia")
 
 dx
 
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 
 
