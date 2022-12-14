@@ -100,30 +100,9 @@ st.markdown("""
 lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
  
 
+ 
 
-# ---- WHAT I DO ----
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("Análise Geral de produção dos Técnicos.")
-        st.write("##")
-        st.write(
-            """
-             :
-            """
-        )
-        st.write("<[A Empresa >](https://icatel.com.br/)")
-    with right_column:
-        st_lottie(lottie_coding, height=300, key="coding")
-
-
-
-
-#---- MAINPAGE ----
-    st.write("---")
-
-
+ 
 
 
 # TOP KPI's
@@ -150,7 +129,8 @@ stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/maste
 col1, col2 = st.columns(2)
 
 with col1:  
-   st.image("streamlit-logo-secondary-colormark-darktext.png")
+    st_lottie(lottie_coding, height=300, key="coding")
+
 
 with col2:
    st.header("Produção - 12/2022")
