@@ -230,7 +230,7 @@ local_css("style.css")
 
 
 # ---- CONTACT ----
-with st.container():
+
     st.write("---")
     st.header("Get In Touch With Me!")
     st.write("##")
