@@ -118,7 +118,7 @@ with col1:
    st.image("streamlit-logo-secondary-colormark-darktext.png")
 
 with col2:
-   st.header("Produção Total")
+   st.header("Produção - Dezembro/2022")
    st.metric("",f"{producao_total:}", "")  
 
 
@@ -128,7 +128,7 @@ with col2:
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.subheader("Produção - Dezembro/2022")
+    st.subheader("Produção - Total")
     st.subheader(f"{producao_total:}")
 
 with col2:
