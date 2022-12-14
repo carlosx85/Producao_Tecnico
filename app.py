@@ -230,6 +230,8 @@ local_css("style.css")
 
 
 # ---- CONTACT ----
+with st.container():
+    st.write("---")
  
 
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
