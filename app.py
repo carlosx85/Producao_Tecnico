@@ -21,6 +21,14 @@ st.set_page_config(
      
     )   
 
+    
+
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+
+
+
 
 def get_data_from_excel():
 # ---- READ EXCEL ----
@@ -91,9 +99,6 @@ limpeza = df[df['Tipo'] == "Limpeza"].shape[0]
 producao_total = improdutivo + producao
 
 
-
-with open('style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
 
