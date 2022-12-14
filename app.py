@@ -8,7 +8,14 @@ from PIL import Image
 import matplotlib
 import seaborn as sns
 from streamlit_lottie import st_lottie
+import requests
 
+
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
@@ -20,7 +27,9 @@ st.set_page_config(
      
     )   
 
-    
+
+
+
 
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -209,11 +218,7 @@ st.title(":bar_chart: Producão Dia")
 
 dx
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+
 
 
 
