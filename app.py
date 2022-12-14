@@ -10,6 +10,9 @@ import seaborn as sns
 from streamlit_lottie import st_lottie
 import requests
 
+# ---- LOAD ASSETS ----
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -217,27 +220,30 @@ dx
 
 
 
-# ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+
  
 # ---- WHAT I DO ----
 with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.header("What I do")
+        st.header("Produção o que é")
         st.write("##")
         st.write(
             """
-            On my YouTube channel I am creating tutorials for people who:
-            - are looking for a way to leverage the power of Python in their day-to-day work.
-            - are struggling with repetitive tasks in Excel and are looking for a way to use Python and VBA.
-            - want to learn Data Analysis & Data Science to perform meaningful and impactful analyses.
-            - are working with Excel and found themselves thinking - "there has to be a better way."
-            If this sounds interesting to you, consider subscribing and turning on the notifications, so you don’t miss any content.
+            Como gestor operacional da sua própria factoring, no entanto, você será responsável pelos resultados de todos, 
+            garantindo que cada área da empresa funcione em sua máxima eficiência. 
+            Em geral, o trabalho como gestor operacional envolve:
+            - Desenho de processos.
+            - Melhoria e otimização de processosA.
+            - Automação de processos.
+            - Execução do processo"
+            ara que as empresas modernas operem nos níveis de eficiência exigidos para sucesso no mercado, 
+            elas devem controlar seus processos de negócios. 
+            Os processos de negócios estruturados fornecem a base para a automação e o uso eficaz da tecnologia dentro da organização.
             """
         )
-        st.write("<[YouTube Channel >](https://youtube.com/c/CodingIsFun)")
+        st.write("<[A Empresa >](https://icatel.com.br/)")
     with right_column:
         st_lottie(lottie_coding, height=300, key="coding")
 
