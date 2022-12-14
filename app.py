@@ -83,7 +83,7 @@ st.markdown("""
 
 
 #---- MAINPAGE ----
-st.title(":bar_chart: Produção- 12/2022")
+st.title(":bar_chart: Produção")
 st.markdown('''Análise Geral de produção dos Técnicos com relação a Telefonia de Uso Público.''')
 
 
@@ -128,7 +128,7 @@ with col2:
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.subheader("Produção Total")
+    st.subheader("Produção - Dezembro/2022")
     st.subheader(f"{producao_total:}")
 
 with col2:
