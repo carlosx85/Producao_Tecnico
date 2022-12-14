@@ -88,14 +88,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-
-with st.container():
-
-
-    
 #---- MAINPAGE ----
-st.title(":bar_chart: Produção")
-st.markdown('''Análise Geral de produção dos Técnicos.''')
+with st.container():
+    st.title(":bar_chart: Produção")
+    st.markdown('''Análise Geral de produção dos Técnicos.''')
 
 
 
