@@ -225,7 +225,7 @@ lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fc
 
 # ---- WHAT I DO ----
 with st.container():
-    st.write("---")
+   
     left_column, right_column = st.columns(2)
     with left_column:
         st.header("Produção o que é")
