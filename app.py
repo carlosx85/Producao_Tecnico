@@ -93,7 +93,7 @@ producao_total = improdutivo + producao
 
 
 
-with open('style.css') as f:
+with open('stylex.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Data
