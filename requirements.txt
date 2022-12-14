@@ -3,4 +3,5 @@ plotly==4.14.3
 pandas==1.4.3
 streamlit==1.12.0
 matplotlib==3.6.2
+tkinter ==1.0
 seaborn ==0.12.1
