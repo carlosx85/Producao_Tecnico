@@ -61,20 +61,20 @@ st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootst
 
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #8B008B;">
-  <a class="navbar-brand" href="http://servicotp.com.br/icatel/" target="_blank">Icatel Serviços</a>
+  <a class="navbar-brand" href="app.py" target="_blank">Icatel Serviços</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link disabled" href="http://servicotp.com.br/icatel/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link disabled" href="Producao.py">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://servicotp.com.br/icatel/" target="_blank">Geral</a>
+        <a class="nav-link" href="Tecnicos.py" target="_blank">Geral</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://servicotp.com.br/icatel/" target="_blank">Técnicos</a>
+        <a class="nav-link" href="appy.py" target="_blank">Técnicos</a>
       </li>
     </ul>
   </div>
