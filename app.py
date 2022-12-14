@@ -16,7 +16,7 @@ st.set_page_config(
     page_title="Telefonia Pública - App",
     page_icon=":bar_chart:",
     layout="wide",
-    initial_sidebar_state="expanded"
+
      
     )   
 
@@ -28,7 +28,7 @@ with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
-
+ 
 
 
 def get_data_from_excel():
