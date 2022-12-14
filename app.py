@@ -14,7 +14,7 @@ import seaborn as sns
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
 st.set_page_config(
-    page_title="xxxTelefonia Pública - App",
+    page_title="Telefonia Pública - App",
     page_icon=":bar_chart:",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -83,7 +83,7 @@ st.markdown("""
 
 
 #---- MAINPAGE ----
-st.title(":bar_chart: Produção Mensal - Dezembro 2022")
+st.title(":bar_chart: Produção- 12/2022")
 st.markdown('''Análise Geral de produção dos Técnicos com relação a Telefonia de Uso Público.''')
 
 
