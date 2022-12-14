@@ -88,6 +88,47 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+
+
+
+
+
+# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
+
+
+# ---- LOAD ASSETS ----
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+ 
+
+
+# ---- WHAT I DO ----
+with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.header("Produção o que é")
+        st.write("##")
+        st.write(
+            """
+            Como gestor operacional da sua própria factoring, no entanto, você será responsável pelos resultados de todos, 
+            garantindo que cada área da empresa funcione em sua máxima eficiência. 
+            Em geral, o trabalho como gestor operacional envolve:
+            - Desenho de processos.
+            - Melhoria e otimização de processosA.
+            - Automação de processos.
+            - Execução do processo"
+            ara que as empresas modernas operem nos níveis de eficiência exigidos para sucesso no mercado, 
+            elas devem controlar seus processos de negócios. 
+            Os processos de negócios estruturados fornecem a base para a automação e o uso eficaz da tecnologia dentro da organização.
+            """
+        )
+        st.write("<[A Empresa >](https://icatel.com.br/)")
+    with right_column:
+        st_lottie(lottie_coding, height=300, key="coding")
+
+
+
+        
 #---- MAINPAGE ----
 st.title(":bar_chart: Produção")
 st.markdown('''Análise Geral de produção dos Técnicos.''')
@@ -214,39 +255,6 @@ dx
 
 
 
-
-# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-
-
-# ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
- 
-
-
-# ---- WHAT I DO ----
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("Produção o que é")
-        st.write("##")
-        st.write(
-            """
-            Como gestor operacional da sua própria factoring, no entanto, você será responsável pelos resultados de todos, 
-            garantindo que cada área da empresa funcione em sua máxima eficiência. 
-            Em geral, o trabalho como gestor operacional envolve:
-            - Desenho de processos.
-            - Melhoria e otimização de processosA.
-            - Automação de processos.
-            - Execução do processo"
-            ara que as empresas modernas operem nos níveis de eficiência exigidos para sucesso no mercado, 
-            elas devem controlar seus processos de negócios. 
-            Os processos de negócios estruturados fornecem a base para a automação e o uso eficaz da tecnologia dentro da organização.
-            """
-        )
-        st.write("<[A Empresa >](https://icatel.com.br/)")
-    with right_column:
-        st_lottie(lottie_coding, height=300, key="coding")
 
 
 
