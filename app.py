@@ -74,7 +74,7 @@ st.markdown("""
         <a class="nav-link" href="Tecnicos.py" target="_blank">Geral</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="appy.py" target="_blank">Técnicos</a>
+        <a class="nav-link" href="app.py" target="_blank">Técnicos</a>
       </li>
     </ul>
   </div>
@@ -84,7 +84,7 @@ st.markdown("""
 
 #---- MAINPAGE ----
 st.title(":bar_chart: Produção")
-st.markdown('''Análise Geral de produção dos Técnicos com relação a Telefonia de Uso Público.''')
+st.markdown('''Análise Geral de produção dos Técnicos.''')
 
 
 
@@ -118,7 +118,7 @@ with col1:
    st.image("streamlit-logo-secondary-colormark-darktext.png")
 
 with col2:
-   st.header("Produção - Dezembro/2022")
+   st.header("Produção - 12/2022")
    st.metric("",f"{producao_total:}", "")  
 
 
