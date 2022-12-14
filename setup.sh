@@ -1,5 +1,3 @@
-mkdir -p ~/.streamilt/
-
 echo "\
 [server]\n\
 headless = true\n\
