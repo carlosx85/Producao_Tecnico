@@ -89,9 +89,8 @@ st.markdown("""
 
 
 #---- MAINPAGE ----
-with st.container():
-    st.title(":bar_chart: Produção")
-    st.markdown('''Análise Geral de produção dos Técnicos.''')
+st.title(":bar_chart: Produção")
+st.markdown('''Análise Geral de produção dos Técnicos.''')
 
 
 
@@ -225,7 +224,7 @@ lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fc
 
 
 # ---- WHAT I DO ----
-
+with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
