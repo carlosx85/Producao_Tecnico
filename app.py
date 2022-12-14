@@ -230,10 +230,7 @@ local_css("style.css")
 
 
 # ---- CONTACT ----
-
-    st.write("---")
-    st.header("Get In Touch With Me!")
-    st.write("##")
+ 
 
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     contact_form = """
