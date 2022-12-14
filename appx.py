@@ -14,7 +14,7 @@ import seaborn as sns
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
 st.set_page_config(
-    page_title="Telefonia Pública - App",
+    page_title="xxxTelefonia Pública - App",
     page_icon=":bar_chart:",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -22,6 +22,9 @@ st.set_page_config(
     )   
 
     
+
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
 
