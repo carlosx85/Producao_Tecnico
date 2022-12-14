@@ -16,7 +16,7 @@ st.set_page_config(
     page_title="Telefonia Pública - App",
     page_icon=":bar_chart:",
     layout="wide",
-
+    initial_sidebar_state="expanded"
      
     )   
 
@@ -29,6 +29,11 @@ with open('style.css') as f:
 
 
  
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 
 def get_data_from_excel():
@@ -209,11 +214,6 @@ dx
 
 
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
