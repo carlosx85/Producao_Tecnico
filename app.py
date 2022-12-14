@@ -11,18 +11,6 @@ from streamlit_lottie import st_lottie
 import requests
 
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-
-
-# ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
- 
 
 st.set_page_config(
     page_title="Telefonia Pública - App",
@@ -221,6 +209,18 @@ dx
 
 
 
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
+
+
+# ---- LOAD ASSETS ----
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+ 
 
 
 # ---- WHAT I DO ----
