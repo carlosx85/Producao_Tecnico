@@ -10,9 +10,6 @@ import seaborn as sns
 from streamlit_lottie import st_lottie
 import requests
 
-# ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
-
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -21,6 +18,11 @@ def load_lottieurl(url):
     return r.json()
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
+
+
+# ---- LOAD ASSETS ----
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+ 
 
 st.set_page_config(
     page_title="Telefonia Pública - App",
@@ -221,7 +223,6 @@ dx
 
 
 
- 
 # ---- WHAT I DO ----
 with st.container():
     st.write("---")
