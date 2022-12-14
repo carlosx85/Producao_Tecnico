@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import plotly.graph_objects as go
 from PIL import Image
-import tkinter
 import matplotlib
 import seaborn as sns
 
@@ -97,7 +96,7 @@ with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
-    
+
 
 # Data
 seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
