@@ -205,7 +205,6 @@ right_column.plotly_chart(fig_product_sales, use_container_width=True)
  
 
 pd.DataFrame()
-
 chart_data = pd.DataFrame(np.random.randn(30, 3),    columns=df["Tipo"].unique())
 st.line_chart(chart_data)
 
@@ -213,25 +212,36 @@ st.line_chart(chart_data)
 
 # LISTAGEM DIA
 st.title(":bar_chart: Listagem")
-
-dx = pd.crosstab(df.Supervisor, df.Tipo , margins=True,  margins_name="Total")
 df
 
+
+dx = pd.crosstab(df.Supervisor, df.Tipo , margins=True,  margins_name="Total")
 st.title(":bar_chart: Produção Dia")
 dx
+
+
+
+da=pd.crosstab(df.Tecnico, df.Dia , margins=True,  margins_name="Total")
+da
+
+
 
 # Use local CSS
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
 local_css("style.css")
+
+
+
+
+
+
 
 
 # ---- CONTACT ----
 with st.container():
-    st.write("Contato")
+    st.write("<h3><B>Contato<h3></b>")
     st.write("---")
  
 
