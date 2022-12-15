@@ -6,3 +6,4 @@ matplotlib==3.6.2
 seaborn ==0.12.1
 streamlit_lottie==0.0.2
 requests==2.24.0
+yfinance==0.1.90
