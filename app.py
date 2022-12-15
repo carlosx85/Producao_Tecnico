@@ -231,6 +231,7 @@ local_css("style.css")
 
 # ---- CONTACT ----
 with st.container():
+    st.write("Contato")
     st.write("---")
  
 
