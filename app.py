@@ -39,7 +39,7 @@ def load_lottieurl(url):
 def get_data_from_excel():
 # ---- READ EXCEL ----
     df = pd.read_excel(
-    io="http://servicotp.com.br/icatel/producao/producao.xlsx",
+    io="producao.xlsx",
     engine="openpyxl",
     sheet_name="Analitico",
     skiprows=0,
